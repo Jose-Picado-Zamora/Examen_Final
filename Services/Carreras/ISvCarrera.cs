@@ -11,7 +11,7 @@ namespace Services.Carreras
     {
         public Carrera AddCarrera(Carrera Carrera);
         public List<Carrera> GetAllCarrera();
-        public Carrera GetCarreraById(int id);
+        public Carrera GetCarreraById(int Id);
 
     }
 }

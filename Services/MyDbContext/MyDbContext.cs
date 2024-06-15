@@ -18,7 +18,7 @@ namespace Services.MyDbContext
         public DbSet<Estudiante> Estudiantes { get; set; }
         public DbSet<Carrera> Carreras { get; set; }
         public DbSet<Matricula> Matriculas { get; set; }
-        public DbSet<Curso> Categories { get; set; }
+        public DbSet<Curso> Cursos { get; set; }
         public DbSet<Nivel> Niveles { get; set; }
 
 

@@ -10,7 +10,7 @@ namespace Services.Matriculas
     public interface IsVMatriculas
     {
         public Matricula AddMatricula(Matricula matricula);
-        public Matricula GetMatriculaById(int id);
+        public Matricula GetMatriculaById(int Id);
         public List<Matricula> GetAllMatriculas();
     }
 }

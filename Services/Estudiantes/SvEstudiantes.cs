@@ -4,14 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Services.MyDbContext;
 using Entities;
 
 namespace Services.Estudiantes
 {
-    public class SvEstudiante : IsVEstudiantes
+    public class SvEstudiantes : IsVEstudiantes
     {
         private MyContext _myDbContext = default!;
-        public SvEstudiante()
+        public SvEstudiantes()
         {
             _myDbContext = new MyContext();
         }
@@ -21,9 +22,9 @@ namespace Services.Estudiantes
             return _myDbContext.Estudiantes.ToList();
 
         }
-        public Estudiante GetEstudianteById(int id)
+        public Estudiante GetEstudianteById(int Id)
         {
-            return _myDbContext.Estudiantes.SingleOrDefault(x => x.id == id);
+            return _myDbContext.Estudiantes.SingleOrDefault(x => x.Id == Id);
         }
         #endregion
 
