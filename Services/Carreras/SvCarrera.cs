@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Services.MyDbContext;
+
 using Entities;
 namespace Services.Carreras
 {
@@ -21,9 +23,9 @@ namespace Services.Carreras
             return _myDbContext.Carreras.ToList();
         }
 
-        public Carrera GetCarreraById(int id)
+        public Carrera GetCarreraById(int Id)
         {
-            return _myDbContext.Carreras.SingleOrDefault(x => x.id == id);
+            return _myDbContext.Carreras.SingleOrDefault(x => x.Id == Id);
         }
         #endregion
 

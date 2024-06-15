@@ -12,7 +12,7 @@ builder.Services.AddScoped<ISvCarrera, SvCarrera>();
 builder.Services.AddScoped<IsVCursos, SvCursos>();
 builder.Services.AddScoped<IsVEstudiantes, SvEstudiantes>();
 builder.Services.AddScoped<IsVMatriculas, SvMatriculas>();
-builder.Services.AddScoped<IsVNiveles, SvMatriculas>();
+builder.Services.AddScoped<IsVNiveles, SvNiveles>();
 
 //
 builder.Services.AddControllers()

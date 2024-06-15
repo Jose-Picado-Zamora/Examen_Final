@@ -5,6 +5,6 @@ namespace Services.Cursos
     {
         public Curso AddCurso(Curso curso);
         public List<Curso> GetAllCurso();
-        public Curso GetCursoById(int id);
+        public Curso GetCursoById(int Id);
     }
 }

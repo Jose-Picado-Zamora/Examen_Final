@@ -24,9 +24,9 @@ namespace Services.Cursos
             return _myDbContext.Cursos.ToList();
         }
 
-        public Curso GetCursoById(int id)
+        public Curso GetCursoById(int Id)
         {
-            return _myDbContext.Cursos.SingleOrDefault(x => x.Id == id);
+            return _myDbContext.Cursos.SingleOrDefault(x => x.Id == Id);
         }
     }
 }

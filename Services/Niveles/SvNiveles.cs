@@ -7,7 +7,7 @@ namespace Services.Niveles
     public class SvNiveles : IsVNiveles
     {
         private MyContext _myDbContext = default!;
-        public SvCursos()
+        public SvNiveles()
         {
             _myDbContext = new MyContext();
         }
@@ -24,9 +24,9 @@ namespace Services.Niveles
             return _myDbContext.Niveles.ToList();
         }
 
-        public Nivel GetNivelById(int id)
+        public Nivel GetNivelById(int Id)
         {
-            return _myDbContext.Niveles.SingleOrDefault(x => x.Id == id);
+            return _myDbContext.Niveles.SingleOrDefault(x => x.Id == Id);
         }
     }
 }

@@ -4,14 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Services.MyDbContext;
 using Entities;
 
 namespace Services.Matriculas
 {
-    public class SvMatricula : IsVMatriculas
+    public class SvMatriculas : IsVMatriculas
     {
         private MyContext _myDbContext = default!;
-        public SvMatricula()
+        public SvMatriculas()
         {
             _myDbContext = new MyContext();
         }
@@ -21,9 +22,9 @@ namespace Services.Matriculas
             return _myDbContext.Matriculas.ToList();
         }
 
-        public Matricula GetMatriculaById(int id)
+        public Matricula GetMatriculaById(int Id)
         {
-            return _myDbContext.Matriculas.SingleOrDefault(x => x.id == id);
+            return _myDbContext.Matriculas.SingleOrDefault(x => x.Id == Id);
         }
         #endregion
 

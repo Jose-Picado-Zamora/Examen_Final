@@ -11,7 +11,7 @@ namespace Services.Estudiantes
     public interface IsVEstudiantes
     {
         public Estudiante AddEstudiante(Estudiante estudiante);
-        public Estudiante GetEstudianteById(int id);
+        public Estudiante GetEstudianteById(int Id);
         public List<Estudiante> GetAllEstudiantes();
     }
 }
