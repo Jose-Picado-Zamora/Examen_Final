@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using Entities;
 namespace Services.Cursos
 {
     public interface IsVCursos
     {
+        public Curso AddCurso(Curso curso);
+        public List<Curso> GetAllCurso();
+        public Curso GetCursoById(int id);
     }
 }
