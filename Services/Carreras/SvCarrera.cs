@@ -25,7 +25,7 @@ namespace Services.Carreras
 
         public Carrera GetCarreraById(int Id)
         {
-            return _myDbContext.Carreras.SingleOrDefault(x => x.Id == Id);
+            return _myDbContext.Carreras.Include(x=>x.ListaEstudiantes).SingleOrDefault(x => x.Id == Id);
         }
         #endregion
 

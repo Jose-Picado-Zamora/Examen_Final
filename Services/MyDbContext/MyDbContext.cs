@@ -41,6 +41,10 @@ namespace Services.MyDbContext
                 .HasOne(curso => curso.Curso)
                 .WithMany(estudiantes => estudiantes.ListaEstudiantes);
 
+            modelBuilder.Entity<Estudiante>()
+                .HasOne(c => c.Carrera)
+                .WithMany(estudiantes => estudiantes.ListaEstudiantes);
+
             modelBuilder.Entity<Carrera>()
                 .HasMany(cursos => cursos.ListaCursos);
         }
