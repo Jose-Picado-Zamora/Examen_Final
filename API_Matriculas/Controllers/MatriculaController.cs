@@ -2,7 +2,7 @@
 
 namespace API_Matriculas.Controllers
 {
-    public class CarrerasController : Controller
+    public class MatriculaController : Controller
     {
         public IActionResult Index()
         {
