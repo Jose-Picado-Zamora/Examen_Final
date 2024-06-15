@@ -13,5 +13,7 @@ namespace Entities
         public List<Estudiante>? ListaEstudiantes { get; set; }
         public int NivelId { get; set; }
         public Nivel? Nivel { get; set; }
+        public int CarreraId { get; set; }
+        public Carrera? Carrera { get; set; }
     }
 }
