@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using Entities;
 namespace Services.Niveles
 {
     public interface IsVNiveles
     {
+        public Nivel AddNiveles(Nivel nivel);
+        public List<Nivel> GetAllnivel();
+        public Nivel GetNivelById(int id);
+
     }
 }
