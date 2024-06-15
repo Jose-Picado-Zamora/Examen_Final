@@ -30,41 +30,69 @@ namespace API_Matriculas.Controllers
             _svCarrera = svCarreras;
         }
 
-        [HttpGet("{id}")]
+        //Estudiantes de un curso
+        [HttpGet("Get Curso")]
         public Curso Get(int id)
         {
             return _svCurso.GetCursoById(id);
         }
 
-        [HttpPost]
+        [HttpGet("Get Carrera")]
+        public Carrera GetCarrera(int idCarrera)
+        {
+            return _svCarrera.GetCarreraById(idCarrera);
+        }
+
+        [HttpGet("Get All Carreras")]
+        public IEnumerable<Carrera> GetCarreras()
+        {
+            return _svCarrera.GetAllCarrera();
+        }
+
+        [HttpGet("Get Est")]
+        public IEnumerable<Estudiante> GetEst()
+        {
+            return _svEstudiantes.GetAllEstudiantes();
+        }
+
+        [HttpGet("Get Matri")]
+        public IEnumerable<Matricula> GetMat()
+        {
+            return _svMatriculas.GetAllMatriculas();
+        }
+
+        [HttpPost("Cursos")]
         public void Post([FromBody] Curso curso)
         {
             _svCurso.AddCurso(curso);
         }
 
-        [HttpPost("{Niveles}")]
+        [HttpPost("Niveles")]
         public void Post([FromBody] Nivel nivel)
         {
             _svNiveles.AddNiveles(nivel);
         }
 
-        [HttpPost("{Carrera}")]
+        [HttpPost("Carrera")]
         public void Post([FromBody] Carrera carrera)
         {
             _svCarrera.AddCarrera(carrera);
         }
 
-        [HttpPost("{Estudiante}")]
+        [HttpPost("Estudiante")]
         public void Post([FromBody] Estudiante estudiante)
         {
             _svEstudiantes.AddEstudiante(estudiante);
         }
 
-        [HttpPost("{Matricula}")]
+        [HttpPost("Matricula")]
         public void Post([FromBody] Matricula matricula)
         {
             _svMatriculas.AddMatricula(matricula);
         }
+
+        
+
 
 
 

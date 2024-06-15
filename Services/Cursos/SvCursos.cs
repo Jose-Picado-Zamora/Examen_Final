@@ -30,8 +30,11 @@ namespace Services.Cursos
 
         public Curso GetCursoById(int Id)
         {
-            return _myDbContext.Cursos.SingleOrDefault(x => x.Id == Id);
+            return _myDbContext.Cursos.Include(x=>x.ListaEstudiantes).SingleOrDefault(x => x.Id == Id);
         }
+
+
+        
         #endregion
     }
 }
