@@ -3,11 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Matriculas", "API_Matriculas\API_Matriculas.csproj", "{99FB1624-E741-4033-BF35-F74328AB04D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Matriculas", "API_Matriculas\API_Matriculas.csproj", "{99FB1624-E741-4033-BF35-F74328AB04D1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{80CD96A3-6BBF-4BD4-B5A2-63FE0BCB313E} = {80CD96A3-6BBF-4BD4-B5A2-63FE0BCB313E}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{894005E8-6EB2-4834-860C-49BAC810BD1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{894005E8-6EB2-4834-860C-49BAC810BD1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{80CD96A3-6BBF-4BD4-B5A2-63FE0BCB313E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{80CD96A3-6BBF-4BD4-B5A2-63FE0BCB313E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
