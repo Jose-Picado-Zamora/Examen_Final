@@ -11,6 +11,7 @@ namespace Services.Niveles
         {
             _myDbContext = new MyContext();
         }
+        #region WRITES
         public Nivel AddNiveles(Nivel nivel)
         {
             _myDbContext.Niveles.Add(nivel);
@@ -18,7 +19,9 @@ namespace Services.Niveles
 
             return nivel;
         }
+        #endregion
 
+        #region READS
         public List<Nivel> GetAllnivel()
         {
             return _myDbContext.Niveles.ToList();
@@ -28,5 +31,6 @@ namespace Services.Niveles
         {
             return _myDbContext.Niveles.SingleOrDefault(x => x.Id == id);
         }
+        #endregion
     }
 }

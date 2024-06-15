@@ -11,6 +11,8 @@ namespace Services.Cursos
         {
             _myDbContext = new MyContext();
         }
+
+        #region WRITES
         public Curso AddCurso(Curso curso)
         {
             _myDbContext.Cursos.Add(curso);
@@ -18,7 +20,9 @@ namespace Services.Cursos
 
             return curso;
         }
+        #endregion
 
+        #region READS
         public List<Curso> GetAllCurso()
         {
             return _myDbContext.Cursos.ToList();
@@ -28,5 +32,6 @@ namespace Services.Cursos
         {
             return _myDbContext.Cursos.SingleOrDefault(x => x.Id == id);
         }
+        #endregion
     }
 }
