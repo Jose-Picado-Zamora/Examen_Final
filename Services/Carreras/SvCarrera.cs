@@ -20,7 +20,7 @@ namespace Services.Carreras
         #region reads
         public List<Carrera> GetAllCarrera()
         {
-            return _myDbContext.Carreras.ToList();
+            return _myDbContext.Carreras.Include(x=>x.ListaCursos).ToList();
         }
 
         public Carrera GetCarreraById(int Id)

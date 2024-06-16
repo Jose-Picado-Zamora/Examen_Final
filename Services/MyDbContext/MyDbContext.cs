@@ -33,6 +33,7 @@ namespace Services.MyDbContext
 
             modelBuilder.Entity<Matricula>()
                 .HasOne(matricula => matricula.Estudiante);
+                
 
             modelBuilder.Entity<Matricula>()
                 .HasOne(matricula => matricula.Curso);

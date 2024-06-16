@@ -1,6 +1,7 @@
 ﻿using Entities;
 using Microsoft.EntityFrameworkCore;
 using Services.MyDbContext;
+using System.Collections.Generic;
 
 namespace Services.Cursos
 {
@@ -25,16 +26,14 @@ namespace Services.Cursos
         #region READS
         public List<Curso> GetAllCurso()
         {
-            return _myDbContext.Cursos.ToList();
+            return _myDbContext.Cursos.Include(x => x.ListaEstudiantes).Include(x => x.Nivel).Include(x => x.Carrera).ToList();
         }
 
         public Curso GetCursoById(int Id)
         {
             return _myDbContext.Cursos.Include(x=>x.ListaEstudiantes).SingleOrDefault(x => x.Id == Id);
         }
-
-
-        
         #endregion
+
     }
 }

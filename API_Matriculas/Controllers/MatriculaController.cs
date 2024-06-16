@@ -49,6 +49,13 @@ namespace API_Matriculas.Controllers
             return _svCarrera.GetAllCarrera();
         }
 
+
+        [HttpGet("Get Estudiantes by Nivel and Carrera")]
+        public IEnumerable<Estudiante> GetEstudiantesByNivelAndCarrera(int nivelId, int carreraId)
+        {
+            return _svMatriculas.GetEstudiantesByNivelAndCarrera(nivelId, carreraId);
+        }
+
         [HttpGet("Get Est")]
         public IEnumerable<Estudiante> GetEst()
         {

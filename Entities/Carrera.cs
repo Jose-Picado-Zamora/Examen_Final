@@ -9,8 +9,7 @@ namespace Entities
     public class Carrera
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-
+        public string? Name { get; set; }
         public List<Estudiante>? ListaEstudiantes { get; set; }
         public List<Curso>? ListaCursos { get; set; }
     }
