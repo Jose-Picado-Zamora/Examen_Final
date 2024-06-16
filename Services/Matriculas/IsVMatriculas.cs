@@ -12,5 +12,8 @@ namespace Services.Matriculas
         public Matricula AddMatricula(Matricula matricula);
         public Matricula GetMatriculaById(int Id);
         public List<Matricula> GetAllMatriculas();
+
+        public List<Estudiante> GetEstudiantesByNivel(int NivelId, int CarreraId);
+        public List<Estudiante> GetEstudiantesByNivelAndCarrera(int nivelId, int carreraId);
     }
 }
